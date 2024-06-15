@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="CSS/Sign_in_css/Sign_in_CSS.css" />
+    <link rel="stylesheet" href="CSS/all/root.css">
+    <link rel="stylesheet" href="CSS/all/popup_css.css">
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="form signup all-form">
+        <header>Normal User</header>
+          <div class="column">                
+            <div class="input-field">
+                <input id = "inUserName" type="text" placeholder="full name"  />
+            </div>
+            <div class="input-field">
+                <input id = "inUserID" placeholder="Your ID" type="text" >
+            </div>
+          </div>
+          <div class="column">                
+            <div class="input-field">
+                <input id = "inUserEmail" placeholder="Your Email" type="text" >
+            </div>
+            <div class="input-field">
+                <input id="inUserPhone" type="number" placeholder="phone number"  />
+          </div>
+          </div>
+          <div class="column">                
+            <div class="input-field">
+                <input type="text" id="inUserGender" placeholder="Gender">
+            </div>
+            <div class="input-field">
+                <input id="inUserAge" type="number" placeholder="Enter Your Age"  />
+            </div>
+          </div>
+          <div class="column">                
+            <div class="input-field">
+                <input id="inUserCointry" type="text" placeholder="Enter Cointry"  />
+            </div>
+            <div class="input-field">
+                <input id="inUserLocation" type="text" placeholder="Enter Location"  />
+            </div>
+          </div>
+          <div class="column">                
+            <div class="input-field">
+                <input type="password" id="inUserPassword" placeholder="password"  >
+            </div>
+            <div class="input-field">
+                <input type="password" id= "inUserPassword2" placeholder=" confirm password" >
+            </div>
+        </div>
+
+        <button class="input-field btn" onclick="newUser()"> Sign in</button>
+        
+
+      </div>
+<!-- 
+      <div class="popup" id="popup">
+        <img src="CSS/Sign_in_css/image/x-sign.png" alt="Error">
+        <h2>Error!</h2>
+        <p id="message"></p>
+        <button type="button" onclick="goLogIn()">Ok</button>
+      </div>
+-->
+      <div class="form login all-form">
+        <header>Company</header>
+          <div class="column">                
+            <div class="input-field">
+                <input id = "inCompanyName" type="text" placeholder="full name"  />
+            </div>
+            <div class="input-field">
+                <input id = "inCompanyID" placeholder="Your ID" type="text" >
+            </div>
+        </div>
+        <div class="column">                
+            <div class="input-field">
+                <input id = "inCompanyEmail" placeholder="Your Email" type="text" >
+            </div>
+            <div class="input-field">
+                <input id="inCompanyPhone" type="number" placeholder="phone number"  />
+            </div>
+        </div>
+        <div class="input-field ">
+            <input class="Description" id="inCompanyDescription" type="text" placeholder="Description"  />
+        </div>
+        <div class="column">                
+            <div class="input-field">
+                <input id="inCompanyCointry" type="text" placeholder="Enter Cointry"  />
+            </div>
+            <div class="input-field">
+                <input id="inCompanyLocation" type="text" placeholder="Enter Location"  />
+            </div>
+        </div>
+        <div class="column">                
+            <div class="input-field">
+                <input type="password" id="inCompanyPassword" placeholder="password" required >
+            </div>
+            <div class="input-field">
+                <input type="password" id= "inCompanyPassword2" placeholder=" confirm password" required>
+            </div>
+        </div>
+        <button class="btn" onclick="newCompany()"> Sign in</button>
+        <div class="" style="display: flex;"> <!--Company -->
+          <input type="checkbox" id="boxCompany"  value="T" style="width:15px;">
+          <label for="boxCompany"style="margin-top: 16px;margin-left: 10px;" > Accept all privacy policy</label>
+        </div>
+      </div>
+
+      <div class="" style="height: 20px;"><!--User-->
+        <input type="checkbox" id="boxUser"  value="T" style="width:15px;">
+        <label for="boxUser"> Accept all privacy policy</label>
+      </div>
+
+    </section>
+    
+      <div class="popup" id="popup">
+        <img src="CSS/Sign_in_css/image/x-sign.png" alt="Error">
+        <h2>Error!</h2>
+        <p id="message"></p>
+        <button type="button" onclick="back()">Ok</button>
+      </div>
+
+    <script src="JS/Sign_in_JS.js"></script>
+
+  </body>
+</html>

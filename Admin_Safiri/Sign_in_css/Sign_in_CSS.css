@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0faff;
+}
+
+.column {
+  display: flex;
+  column-gap: 15px;
+}
+.wrapper {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px 30px 120px;
+  background: #0d6efd;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 650px;
+  margin: auto;
+}
+.title{
+  display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+
+.form header {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.wrapper.active .signup header {
+  opacity: 0.6;
+}
+.wrapper.active .signup input{
+  display: none;
+  
+}
+
+.wrapper .all-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.all-form input {
+  height: 60px;
+  outline: none;
+  border: none;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 8px;
+  background: #fff;
+  width: 315px;
+}
+
+.all-form .checkbox label {
+  cursor: pointer;
+  color: #fff;
+}
+
+.all-form a {
+  color: #333;
+  text-decoration: none;
+}
+
+.all-form a:hover {
+  text-decoration: underline;
+}
+
+.all-form input .btn {
+  margin-top: -5px;
+  padding: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+
+
+.btn{
+  width: 90%;
+  height: 60px;
+  margin-left: 20px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.input-field  .Description{
+  width: 100%;
+} 
+
+@media (max-width: 720px) {
+  .all-form input {
+    margin: 10px;
+    width: 100%;
+  }
+  body{
+    margin-right: 0px;
+  }
+  .btn{
+    margin-left: 10px;
+  }
+  .Description{
+    width: 90%;
+  }
+  .column {
+    display: block;
+    column-gap: 10px;
+  }
+  .wrapper{
+    height: 1250px;
+  }
+}
+

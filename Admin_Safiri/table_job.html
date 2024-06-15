@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sa firi</title>   
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="all_css/normalize.css">
+    <link rel="stylesheet" href="all_css/all.min.css">
+    <link rel="stylesheet" href="css/Admin_css.css">
+    <!-- for foramt -->
+    <!-- <link rel="stylesheet" href="header.css"> -->
+    <link rel="stylesheet" href="css/side.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="User/User.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Start SideBar -->
+    <div class="page ">
+        <div class="sidebar">
+            <h3 class="p-relative txt-c mt-0">Admin</h3>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-regular fa-chart-bar fa-fw"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a  href="sendEmail.html">
+                        <i class="fa-solid fa-reply"></i>
+                        <span>Messages to Users </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <i class="fa-regular fa-user fa-fw"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Sing_In.html">
+                        <i class="fa-regular fa-circle-user fa-fw"></i>
+                        <span>New Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_job.html">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>Table Job</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_services.html">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                        <span>Table Service</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_house.html">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                        <span>Table House</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_user.html">
+                        <i class="fa-solid fa-users fa-fw"></i>
+                        <span>Table Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_company.html">
+                        <i class="fa-regular fa-building  fa-fw"></i>
+                        <span>Table Company</span>
+                    </a>
+                </li>
+                <li>
+                    <a >
+                        <i class="fa-regular fa-message fa-fw"></i>
+                        <span>Message Requests</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Start Head -->
+        <!-- End SideBar -->
+        <div class="content">
+            <!-- Start Header -->
+            <header>
+                <div class="container">
+                    <a href="#Home" class="logo">
+                        <h2>Admain</h2>
+                    </a>
+                    <nav class="nav-bar" >
+                        <ul class="list-header">
+                            <div class="search">
+                                <input type="search" placeholder="Search for...">
+                                <div class="btnsearch">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                            <li>
+                                <a id="sectionsLink"><i class="fa-solid fa-user"></i> <i class="fa-solid fa-caret-down" ></i></a>
+                                <div class="dropdown">
+                                    <ul class="sectiondropul">
+                                        <div class="chos"  href="get_job_html.html">
+                                                <i class="fa-solid fa-gear"></i>
+                                                <li class="sectiondropli"><a href="job_html.html" target="">Setiing</a>
+                                                <span>To enter your personal settings</span>
+                                            </li>
+                                        </div>
+                                        <div class="chos">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            <li class="sectiondropli"><a href="service_html.html" target=""> Logout</a>
+                                            <span>To log out of your account</span></li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- End Header -->
+            <!-- Start Table -->
+            <div class="table">
+                <div class="inf_table">
+                    <i class="fa-solid fa-table"></i>
+                    <h1>Data Table For Job</h1>
+                </div>     
+                <div class="data_table">
+                    <div class="search">
+                        <div class="select">
+                            <select class="select" >
+                                <option value="5">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                            </select>
+                            <p>Entries per page</p>
+                        </div>
+                        <input type="search" placeholder="Search...">
+                    </div>
+                    <table>
+                        <tr>
+                            <th>ID User
+                                <div class="sort">
+                                    <i class="fa-solid fa-sort-up"></i>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                            </th>
+                            <th >Name User
+                                <div class="sort">
+                                    <i class="fa-solid fa-sort-up"></i>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                            </th>
+                            <th>ID Post
+                                <div class="sort">
+                                    <i class="fa-solid fa-sort-up"></i>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                            </th>
+                            <th>Post Name
+                                <div class="sort">
+                                    <i class="fa-solid fa-sort-up"></i>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                            </th>
+                            <th>Post Details
+                                <div class="sort">
+                                    <i class="fa-solid fa-sort-up"></i>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                            </th>
+                            <th>Post control
+                                <div class="sort">
+                                    <i class="fa-solid fa-sort-up"></i>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>00000</td>
+                            <td>employees are needed</td>
+                            <td><button class="more">More</button></td>
+                            <td><button style="background-color: red;" class="more">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ali</td>
+                            <td>00000</td>
+                            <td>employees are needed</td>
+                            <td><button class="more">More</button></td>
+                            <td><button style="background-color: red;" class="more">Delete</button></td>
+
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Joe</td>
+                            <td>00000</td>
+                            <td>employees are needed</td>
+                            <td><button class="more">More</button></td>
+                            <td><button style="background-color: red;" class="more">Delete</button></td>
+
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Cleveland</td>
+                            <td>00000</td>
+                            <td>employees are needed</td>
+                            <td><button class="more">More</button></td>
+                            <td><button style="background-color: red;" class="more">Delete</button></td>
+
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Cleveland</td>
+                            <td>00000</td>
+                            <td>employees are needed</td>
+                            <td><button class="more">More</button></td>
+                            <td><button style="background-color: red;" class="more">Delete</button></td>
+
+
+                        </tr>
+                    </table>
+                    <div class="sort_num">
+                        <p>Showing 1 to 10 of 57 entries</p>
+                        <ul>
+                            <li><a href=""><i class="fa-solid fa-angle-left"></i></a></li>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li><a href="">6</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Table -->   
+        </div>
+    </div>
+
+    <!-- Main Template JS File -->
+    <script src="header.js"></script>
+
+</html>

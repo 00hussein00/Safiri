@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sa firi</title>   
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="all_css/normalize.css">
+    <link rel="stylesheet" href="all_css/all.min.css">
+    <link rel="stylesheet" href="css/Admin_css.css">
+    <!-- for foramt -->
+    <!-- <link rel="stylesheet" href="header.css"> -->
+    <link rel="stylesheet" href="css/side.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="User/User.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start SideBar -->
+    <div class="page ">
+        <div class="sidebar">
+            <h3 class="p-relative txt-c mt-0">Admin</h3>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-regular fa-chart-bar fa-fw"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a  href="sendEmail.html">
+                        <i class="fa-solid fa-reply"></i>
+                        <span>Messages to Users </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <i class="fa-regular fa-user fa-fw"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Sing_In.html">
+                        <i class="fa-regular fa-circle-user fa-fw"></i>
+                        <span>New Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_job.html">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>Table Job</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_services.html">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                        <span>Table Service</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_house.html">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                        <span>Table House</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_user.html">
+                        <i class="fa-solid fa-users fa-fw"></i>
+                        <span>Table Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table_company.html">
+                        <i class="fa-regular fa-building  fa-fw"></i>
+                        <span>Table Company</span>
+                    </a>
+                </li>
+                <li>
+                    <a >
+                        <i class="fa-regular fa-message fa-fw"></i>
+                        <span>Message Requests</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Start Head -->
+        <!-- End SideBar -->
+        <div class="content">
+            <!-- Start Header -->
+            <header>
+                <div class="container">
+                    <a href="#Home" class="logo">
+                        <h2>Admain</h2>
+                    </a>
+                    <nav class="nav-bar" >
+                        <ul class="list-header">
+                            <div class="search">
+                                <input type="search" placeholder="Search for...">
+                                <div class="btnsearch">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                            <li>
+                                <a id="sectionsLink"><i class="fa-solid fa-user"></i> <i class="fa-solid fa-caret-down" ></i></a>
+                                <div class="dropdown">
+                                    <ul class="sectiondropul">
+                                        <div class="chos"  href="get_job_html.html">
+                                                <i class="fa-solid fa-gear"></i>
+                                                <li class="sectiondropli"><a href="job_html.html" target="">Setiing</a>
+                                                <span>To enter your personal settings</span>
+                                            </li>
+                                        </div>
+                                        <div class="chos">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            <li class="sectiondropli"><a href="service_html.html" target=""> Logout</a>
+                                            <span>To log out of your account</span></li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- End Header -->
+            <div class="contactus" id="contactus">
+                <div class="form">
+                    <div class="content">
+                        <h2>Messages to users</h2>
+                        <br>
+                        <form >
+                            <input class="input" type="text" placeholder="Your Name" name="name" id="name"/>
+                            <input class="input" type="email" placeholder="Your Email" name="email" id="email"/>
+                            <input class="input" type="text" placeholder="Your Phone" name="mobile" id="phone"/>
+                            <textarea class="input" placeholder="Tell Us About Your Needs" name="message" id="moreInfo"></textarea>
+                            <button id="sendEmailButton" type="button" onclick="sendEmail()">send</button> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main Template JS File -->
+    <script src="header.js"></script>
+
+</html>

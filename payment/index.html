@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>payment</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="payment-section">
+      <div class="container">
+        <div class="payment-wapper">
+          <form action="" class="payment-form">
+            <div class="payment-right">
+              <h1 class="payment-title">Payment Details</h1>
+              <div class="payment-method">
+                <input type="radio" name="payment-method" id="method-1" />
+                <label for="method-1" class="payment-method-item">
+                  <img src="visa.png" alt="" />
+                </label>
+                <input type="radio" name="payment-method" id="method-2" />
+                <label for="method-2" class="payment-method-item">
+                  <img src="mastercard.png" alt="" />
+                </label>
+                <input type="radio" name="payment-method" id="method-3" />
+                <label for="method-3" class="payment-method-item">
+                  <img src="paypal.png" alt="" />
+                </label>
+                <input type="radio" name="payment-method" id="method-4" />
+                <label for="method-4" class="payment-method-item">
+                  <img src="stripe.png" alt="" />
+                </label>
+              </div>
+              <div class="payment-form-group">
+                <input type="email" placeholder=" " class="payment-form-control" id="email">
+                <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
+              </div>
+              <div class="payment-form-group">
+                <input type="text" placeholder=" " class="payment-form-control" id="card-number">
+                <label for="card-number" class="payment-form-label payment-form-label-required">Card Number</label>
+              </div>
+              <div class="payment-form-group-flex">
+                <div class="payment-form-group">
+                  <input type="date" placeholder=" " class="payment-form-control" id="expiry-date">
+                  <label for="expiry-date" class="payment-form-label payment-form-label-required">Expiry Date</label>
+                </div>
+                <div class="payment-form-group">
+                    <input type="text" placeholder=" " class="payment-form-control" id="cvv">
+                    <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
+                </div>
+              </div>
+              <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
+          </form>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

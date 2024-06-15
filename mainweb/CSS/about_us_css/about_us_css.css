@@ -1,0 +1,231 @@
+/* Define custom color variables */
+:root {
+    --background-color: #f7f7f7; /* Background color for the body */
+    --hover-color: #f7ebeb; /* Hover color for vertical bars */
+    --box-shadow-color: rgba(250, 170, 170, 0.1); /* Box shadow color */
+    --text-color: #333; /* Text color for vertical bars */
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: var(--background-color); /* Use the background color variable */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+
+header h1 {
+    font-size: 24px;
+    margin-left: 15px;
+    display: flex;
+}
+.footer {
+    animation: changeBackgroundColor 10s linear infinite; /* Background color animation */
+    width: 100%;
+}
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-content .vertical-bar .all-info h1{
+    font-size: 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #361265;
+}
+.center-content .vertical-bar .all-info p{
+    color: #707070;
+    font-family: "Century Gothic","Apple Gothic",AppleGothic,"URW Gothic L","Avant Garde",Futura,sans-serif;    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+.vertical-bar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px var(--box-shadow-color); /* Use the box shadow color variable */
+    cursor: pointer;
+}
+.vertical-bar img {
+    max-width: 30%;
+    max-height: 250px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.vertical-bar p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color); /* Use the text color variable */
+}
+
+.box-info{
+    width: 90%;
+}
+.left-img img ,.right-img img{
+    opacity: 0;
+}
+/* Animation */
+.animateR img{
+    animation: moveImageR 2.5s  forwards;
+
+}
+.animateO img{
+    animation: moveImageO 2.5s  forwards;
+    opacity: 0;
+}
+.animateO2 img{
+    animation: moveImageO2 2.5s  forwards;
+    opacity: 0;
+
+}
+.animateL img{
+    animation: moveImageL 2.5s  forwards;
+
+}
+
+@keyframes moveImageR {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes moveImageO {
+    from {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-200%);
+        opacity: 1;
+    }
+}
+@keyframes moveImageO2 {
+    from {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(200%);
+        opacity: 1;
+    }
+}
+@keyframes moveImageL {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@media (max-width:900px) {
+    .box-info img{
+        display: none;
+        
+    }
+}
+
+.all-info{
+    align-items: top;
+}
+
+.box-about{
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin: 10px 10px;
+    width: 90%;
+}
+
+.light-box h2{
+    font-size: 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #361265;
+    text-align: center;
+    padding: 0 0 20px 0;
+
+}
+.light-box-red {
+    padding: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.light-box-red a{
+    width: 100%;
+}
+.light-box-red button{
+    width: 100%;
+}
+.light-box .btnsafiri{
+    display: flex;
+    justify-content: center;
+}
+.button {
+    font-family: "Century Gothic","Apple Gothic",AppleGothic,"URW Gothic L","Avant Garde",Futura,sans-serif;    font-weight: 400;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0 20px 0;
+}
+.button:hover {
+    background-color: #2980b9;
+}
+.light-btn {
+    font-family: "Century Gothic","Apple Gothic",AppleGothic,"URW Gothic L","Avant Garde",Futura,sans-serif;    font-weight: 400;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0 20px 0;
+    background-color: #3498db;
+    width: 45%;
+}
+.light-btn:hover {
+    background-color: #2980b9;
+}

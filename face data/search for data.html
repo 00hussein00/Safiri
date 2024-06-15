@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Storage and Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 5px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Storage and Search</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label for="id">ID:</label>
+    <input type="text" id="id">
+    <label for="length">Length:</label>
+    <input type="text" id="length">
+    <button onclick="saveData()">Save Data</button>
+    <br>
+    <label for="searchId">Enter ID to Search:</label>
+    <input type="text" id="searchId">
+    <button onclick="searchData()">Search</button>
+    <div id="result"></div>
+
+    <script>
+        // Initialize an object to store the data
+        var data = JSON.parse(localStorage.getItem('dataUser')) || {};
+
+        function saveData() {
+            // Get the values from the input fields
+            var name = document.getElementById('name').value;
+            var id = document.getElementById('id').value;
+            var length = document.getElementById('length').value;
+
+            // Create an object with the data
+            var newData = {
+                name: name,
+                id: id,
+                length: length
+            };
+
+            // Store the data in the object using the ID as the key
+            data[id] = newData;
+
+            // Save the data to localStorage
+            localStorage.setItem('data', JSON.stringify(data));
+
+            // Clear the input fields
+            document.getElementById('name').value = '';
+            document.getElementById('id').value = '';
+            document.getElementById('length').value = '';
+        }
+
+        function searchData() {
+            // Get the ID to search for
+            var searchId = document.getElementById('searchId').value;
+
+            // Check if the ID exists in the data object
+            if (data.hasOwnProperty(searchId)) {
+                // If found, display the data
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `
+                    <h2>Data Found for ID ${searchId}:</h2>
+                    <p>Name: ${data[searchId].uname}</p>
+                    <p>ID: ${data[searchId].id}</p>
+                    <p>Length: ${data[searchId].length}</p>
+                `;
+            } else {
+                // If not found, show an alert
+                alert(`Data not found for ID ${searchId}`);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/*============================== Start Header  =======================================*/
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #212529;
+  position: relative;
+  transition: 0.3s;
+  position: fixed;
+  z-index: 1111111;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 56px;
+    padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+header .logo{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo h2 {
+  color: white;
+  font-weight: 400;
+  font-size: 21px;
+}
+header .logo .fa-bars {
+  color: rgb(154, 154, 154);
+  padding:  5px 0 0 50px;
+
+}
+header .nav-bar .search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header  .nav-bar input{
+  border: 2px solid transparent;
+  width: 15rem;
+  height: 35px;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #F3F3F3;
+  border-radius: 5px 0 0 5px;
+  transition: all 0.5s;
+}
+header .nav-bar input:focus {
+  border: 2px solid #4A9DEC;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+header  .nav-bar .search .btnsearch{
+  height: 35px;
+  width: 35px;
+  background-color: #0d6efd;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+header  .nav-bar .search .btnsearch:hover{
+  background-color: #0955c6;
+}
+header  .nav-bar .search i{
+  color: white;
+}
+header .nav-bar{
+  position: 0 20px 0 0;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li a{
+  display: block;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  color: #9a9a9a;
+  font-size: 15.5px;
+  padding: 5px 5px;
+  transition: 0.3s;
+  margin: 3px 35px;
+  cursor: pointer;
+}
+
+header nav ul .dropdown li{
+  display: block;
+}
+header nav ul .dropdown {
+  width: 300px;
+  position: absolute;
+  z-index: 99999;
+  top: 100%;
+  display: none;
+  background-color: white;
+  right: 20px;
+}
+header nav ul .dropdown ul{
+  display: block;
+  box-shadow: 0 0 20px 4px rgba(33, 40, 50, 0.15);
+  padding: 0;
+}
+header nav ul .dropdown .sectiondropul .chos{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid #e0e5ec;
+  cursor: pointer;
+}
+header nav ul .dropdown .sectiondropul .chos l{
+  width: 100%;
+} 
+header nav ul .dropdown .sectiondropul .chos a{
+  color: #a7aeb8 !important;
+  font-size: 0.875em;
+  margin: 0;
+  padding: 0;
+} 
+header nav ul .dropdown .sectiondropul .chos span{
+  font-size: 0.875em;
+}
+header nav ul .dropdown .sectiondropul .chos i{
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 10px;
+}
+header nav ul .dropdown .sectiondropul .sectiondropli{
+  padding: 0.25rem 1rem;
+  width: 100%;
+}
+header nav ul .dropdown .sectiondropul .chos:hover{
+  background-color: #e0e5ec;
+  transition:.2s;
+}
+
+
+/*============================== End Header ====================================*/

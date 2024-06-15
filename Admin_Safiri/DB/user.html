@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        .data-container {
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .data-box {
+            max-width: 100%;
+            border: 1px solid #ccc;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .data-box h2 {
+            background-color: #007BFF;
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .data-box form {
+            padding: 20px;
+        }
+
+        .data-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .data-box input[type="text"],
+        .data-box input[type="number"],
+        .data-box input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .data-box button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .data-box #savedData {
+            max-height: 300px;
+            overflow-y: auto;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .data-box table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-box th, .data-box td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .data-box th {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .data-box th:first-child {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Viewer</h1>
+        <div class="data-box" id="userDataBox">
+            <h2>User Data</h2>
+            <div id="savedUserData">
+                <h3>Saved User Data</h3>
+                <table>
+                    <thead>
+
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="data-box" id="companyDataBox">
+            <h2>Company Data</h2>
+            <div id="savedCompanyData">
+                <h3>Saved Company Data</h3>
+                <table>
+                    <thead>
+                        
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    
+
+    <script>
+        // Function to retrieve data from localStorage
+        function retrieveData(dataKey) {
+            return JSON.parse(localStorage.getItem(dataKey)) || {};
+        }
+
+        // Function to display saved data as a table with a header
+        function displaySavedData(dataKey, containerId, headerRow) {
+            var savedDataDiv = document.getElementById(containerId);
+            savedDataDiv.innerHTML = '';
+
+            var data = retrieveData(dataKey);
+
+            if (Object.keys(data).length === 0) {
+                savedDataDiv.innerHTML = '<p>No data found.</p>';
+                return;
+            }
+
+            var table = document.createElement('table');
+            var thead = document.createElement('thead');
+            var tbody = document.createElement('tbody');
+
+            // Create table header
+            var headerRowElement = document.createElement('tr');
+            for (var i = 0; i < headerRow.length; i++) {
+                var th = document.createElement('th');
+                th.textContent = headerRow[i];
+                headerRowElement.appendChild(th);
+            }
+            thead.appendChild(headerRowElement);
+            table.appendChild(thead);
+
+            // Create table rows with data
+            for (var id in data) {
+                var rowData = data[id];
+                var row = document.createElement('tr');
+
+                for (var prop in rowData) {
+                    var cell = document.createElement('td');
+                    cell.textContent = rowData[prop];
+                    row.appendChild(cell);
+                }
+
+                tbody.appendChild(row);
+            }
+
+            table.appendChild(tbody);
+            savedDataDiv.appendChild(table);
+        }
+
+        // Header row for User Data
+        var userHeaderRow = ['uname', 'uID', 'uEmail', 'uPhone', 'uGender', 'uAge', 'uCointry', 'uLocation','uPassword','image','Verified'];
+        // Header row for Company Data
+        var companyHeaderRow = ['cname', 'cID', 'cEmail', 'cPhone', 'cDescription', 'cCointry', 'cLocation','cPassword','image','Verified'];
+
+        // Display saved user data on page load with header
+        displaySavedData('dataUser', 'savedUserData', userHeaderRow);
+        // Display saved company data on page load with header
+        displaySavedData('dataCompany', 'savedCompanyData', companyHeaderRow);
+    </script>
+</body>
+</html>
