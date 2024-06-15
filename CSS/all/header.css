@@ -1,0 +1,149 @@
+/*============================== Start Header  =======================================*/
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: white;
+  position: relative;
+  transition: 0.3s;
+  position: fixed;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .logo img {
+  height: 40px;
+}
+header nav {
+  flex: 1;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  color: black;
+  margin: 0 0 0 18px;
+}
+header nav .toggle-menu {
+  color: black;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  header nav .toggle-menu {
+    display: none;
+  }
+}
+header nav ul {
+  display: flex;
+}
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+  }
+  header nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.159);
+  }
+  header nav ul li a {
+    padding: 15px !important;
+  }
+} 
+header nav ul li a{
+  display: block;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  color: #9a9a9a;
+  font-size: 15.5px;
+  padding: 5px 5px;
+  transition: 0.3s;
+  margin: 3px 5px;
+  cursor: pointer;
+}
+header nav ul li a:hover{
+  color: black;
+
+}
+header nav ul .dropdown li{
+  display: block;
+
+  
+}
+header nav ul .dropdown {
+  width: 300px;
+  position: absolute;
+  z-index: 99999;
+  top: 100%;
+  display: none;
+  background-color: white;
+}
+header nav ul :hover .dropdown{
+  display: block;
+}
+header nav ul .dropdown ul{
+  display: block;
+  box-shadow: 0 0 20px 4px rgba(33, 40, 50, 0.15);
+}
+header nav ul .dropdown .sectiondropul .chos{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid #e0e5ec;
+  cursor: pointer;
+
+}
+header nav ul .dropdown .sectiondropul .chos l{
+  width: 100%;
+} 
+header nav ul .dropdown .sectiondropul .chos a{
+  color: #a7aeb8 !important;
+  font-size: 0.875em;
+  margin: 0;
+  padding: 0;
+} 
+header nav ul .dropdown .sectiondropul .chos span{
+  font-size: 0.875em;
+}
+header nav ul .dropdown .sectiondropul .chos i{
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color:var(--sidebar-color);
+  padding: 8px;
+  margin: 10px;
+  color: var(--primary-color);
+}
+header nav ul .dropdown .sectiondropul .sectiondropli{
+  padding: 0.25rem 1rem;
+  width: 100%;
+}
+header nav ul .dropdown .sectiondropul .chos:hover{
+  background-color: #e0e5ec;
+  transition:.2s;
+}
+header .add-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .add-button .add-btn{
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  font-size: 15.5px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: 500 !important;
+}
+
+/*============================== End Header ====================================*/

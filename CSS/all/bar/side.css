@@ -1,0 +1,192 @@
+
+/*============================== Start Slider Nav =====================================*/
+.toogle{
+  position: absolute;
+  top: 50px;
+  right:-10px ;
+  height: 25px;
+  width: 25px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--toogle-color);
+  font-size: 22px;
+  cursor: pointer;
+  transform: translateY(-50%) rotate(180deg);
+
+}
+.sidebar.close .toogle{
+  transform: translateY(-50%);
+
+}
+.sidebar.close .text{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+  transition:ALL 0.3S ease ;
+  white-space: nowrap;
+  opacity: 1;
+
+}
+.sidebar{
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 230px; 
+  /* background-color: var(--sidebar-color);  */
+  background-color: var(--sidebar-color); 
+  padding: 10px 14px;
+  z-index: 100;
+  transition:ALL 0.4S ease ;
+
+}
+.sidebar.close{
+  width: 88px; 
+
+}
+.sidebar.close .text{
+  opacity:0; 
+
+}
+.user123{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  
+}
+.user div{
+  display: none;
+}
+.user h2{
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.user-img{
+  width: 40px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar li{
+  height: 50px;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.sidebar li .icon{
+  font-size: 20px;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar li .icon,
+.sidebar li .text{
+  color: var(--text-color);
+  transition:ALL 0.2S ease ;
+
+}
+.sidebar li a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 6PX;
+  transition:ALL 0.4S ease ;
+}
+.sidebar li a:hover {
+  background:var(--primary-color) ;
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+  color: #fff;
+  transition:ALL 0.3S ease ;
+}
+.sidebar .search-box{
+  background: var(--primary-color-light);
+}
+.search-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
+}
+.sidebar .menu-bar{
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-bar .mode{
+  position: relative;
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
+}
+.menu-bar .mode .mode-sun{
+  height: 50px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+
+}
+.menu-bar .mode i{
+  position: absolute;
+}
+.menu-bar .mode i .sun{
+  opacity: 0;
+}
+.menu-bar .mode .toogle-switch{
+  position: absolute;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 60px;
+  cursor: pointer;
+}
+.toogle-switch .switch{
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background: var(--toogle-color);
+}
+.switch::before{
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background: var(--primary-color-light);
+  transition:ALL 0.3S ease ;
+}
+body.dark .switch::before{
+  left: 24px;
+}
+@media (max-width: 768px) {
+  .sidebar{
+    display: none;
+  }
+}
+/*============================== End Slider Nav ==================================*/

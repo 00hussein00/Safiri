@@ -1,0 +1,207 @@
+
+/*============================== Start Responsive Screen ==============================*/
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin-top: 50px;
+  }
+}
+.Name-Post{
+  display: flex;
+  justify-content: center;
+  padding: 22px;
+}
+.owner-post i{
+  float: right;
+  font-size: 20px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+.Name-Post h2{
+  color: var(--text-color);
+}
+.details {
+  margin: 80px 0 0 0;
+}
+.details .container{
+  display: flex;
+  justify-content: space-around;
+}
+.details .container .post{
+  width: 50%;
+  padding: 0 0 40px 0;
+}
+
+.details .container .post h2{
+  padding: 20px;
+  font-size: 28px;
+}
+.details .container .description{
+  background-color: white;
+  border: 2px solid black;
+}
+.details .container .description .head{
+  border-bottom: 2px solid #eaeaea;
+}
+.details .container .description .head h1{
+  font-size:23px ;
+  padding: 10px;
+}
+.details .container .description p{
+  font-size:17px ;
+  padding: 10px;
+}
+.details .container .information{
+  order: 1px solid;
+  margin-top: 20px;
+  background-color: white;
+  border: 2px solid;
+}
+.details .container .information h1{
+  font-size:23px ;
+  padding: 10px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.details .container .owner-post{
+  border: 1px solid;
+  margin: 0 0px 0px 20px;
+  background-color: white;
+  border: 2px solid;
+  padding: 10px 0 17px 10px ;
+  width: 50%;
+  height: 100%;
+}
+.details .container .owner-post h2{
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10px
+}
+.details .container .owner-post .head{
+  display: flex;
+  align-items: center;
+  padding:10px 10px 0 0;
+}
+.details .container .owner-post img{
+  border: 2px solid;
+  border-radius: 50%;
+  width: 4.5rem;
+
+}
+.details .container .owner-post h1{
+  font-size:20px ;
+  padding-left: 10px;
+
+}
+.details .container .owner-post p{
+  padding:10px 10px 0 0;
+
+  font-size:18px ;
+}
+.details .container .owner-post .btnanimation{
+  display: flex;
+  padding: 33px 0 0 0;
+}
+
+.details .container .owner-post .chatBtn {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--primary-color-light);
+  background-image: linear-gradient(147deg, var(--primary-color),var(--primary-color-light) ,var(--primary-color));
+  cursor: pointer;
+  padding-top: 3px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+  position: relative;
+  background-size: 300%;
+  background-position: left;
+  transition-duration: 1s;
+  margin: 10px 20px 0 0;
+  width: 100%;
+
+}
+.details .container .owner-post .chatBtn i{
+  color: white; 
+  font-size: 30px;
+}
+.details .container .owner-post .chatBtn .tooltip {
+  position: absolute;
+  top: -40px;
+  opacity: 0;
+  background-color: var(--primary-color-light);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .5s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+.details .container .owner-post .chatBtn:hover .tooltip {
+  opacity: 1;
+  transition-duration: .5s;
+}
+
+.details .container .owner-post .chatBtn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.details .btnsubmit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.details .btnsubmit button{
+  background-image: linear-gradient(147deg, var(--primary-color),var(--primary-color-light) ,var(--primary-color));
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  border-radius: 10px;
+  display: block;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+
+}
+.details .btnsubmit button:hover {
+  background-position: right center; 
+  color: #fff;
+  text-decoration: none;
+}
