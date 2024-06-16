@@ -15,7 +15,7 @@ this is a web application <just for now> where you can do anything
             corporation, a local startup, or any other company, you can find
             their latest job listings right here.
 
-Services
+<h1>Services</h1>
 
             Are you looking for a specific service or assistance with a task?
             You're in the right place! Browse through the diverse range of
